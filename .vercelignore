@@ -1,0 +1,6 @@
+.env*
+.vercel
+README.md
+_privado
+src-cea
+print
