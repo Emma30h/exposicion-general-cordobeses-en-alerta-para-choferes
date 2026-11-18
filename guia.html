@@ -194,7 +194,7 @@ const bajar=(href,t,s)=>`<a class="descarga" data-a href="${encodeURI(href)}" do
 const L=[
  {id:'portada',t:'Cordobeses en Alerta',pre:radar,b:['Cómo funciona el programa, <b>del mensaje del vecino o de su llamado al 911, al móvil en la calle</b>.','Quiénes somos, cómo trabajamos y cómo se reparte la ciudad en <b>8 frecuencias</b>.','Cómo se agenda el móvil en <b>personal tech</b>.','Esta guía avanza sola junto con la exposición.']},
  {id:'estructura',k:'Quiénes somos',t:'Un equipo civil y policial',x:()=>trio([['188','personas'],['137','personal civil'],['51','técnico y policial']]),b:['La <b>Dirección Monitoreo</b> tiene tres áreas: Ayudantía y Análisis Estadístico, Socioeducativo y el <b>Departamento Alerta Ciudadana</b>.','La <b>División Alerta</b> trabaja en la <b>Base Olimpo</b>, las 24 horas.']},
- {id:'programa',k:'El programa hoy',t:'Tres palabras clave',x:()=>trio([['188.300','vecinos'],['234','barrios'],['24/7','todo el año']]),o:['<b>Cuadrante</b>: la cabina que atiende al vecino.','<b>Frecuencia</b>: el canal de radio; se elige por la UT del hecho.','<b>UT (DJP)</b>: la unidad territorial; en el SAE WEB figura como «DISTRITO».']},
+ {id:'programa',k:'El programa hoy',t:'Tres palabras clave',x:()=>trio([['198.613','vecinos'],['234','barrios'],['24/7','todo el año']]),o:['<b>Cuadrante</b>: la cabina que atiende al vecino.','<b>Frecuencia</b>: el canal de radio; se elige por la UT del hecho.','<b>UT (DJP)</b>: la unidad territorial; en el SAE WEB figura como «DISTRITO».']},
  {id:'frecuencias',k:'Territorio',t:'La frecuencia la define la UT',cls:'fq',off:2,o:[
    `<span class="reg">Norte</span>${fr('--f1','Norte 1','15')}${fr('--f2','Norte 2','14 · 23 · 24 bis')}`,
    `<span class="reg">Este</span>${fr('--f3','Este 1','7 · 9 · 13 · 17')}${fr('--f4','Este 2','6 · 8')}`,
@@ -229,7 +229,7 @@ const L=[
  {id:'equipo',k:'El equipo',t:'188 personas, las 24 horas',x:()=>trio([['A·B','07 a 15 Hs'],['C·D','15 a 23 Hs'],['E·F','23 a 07 Hs']]),b:['Cada turno trabaja <b>2 días y descansa 2</b>.','Un superior de turno cubre de <b>7 a 19 Hs</b> y otro de <b>19 a 7 Hs</b>.']},
  {id:'gracias',t:'¡Muchas gracias!',hide:true,pre:radar,x:()=>`<div class="big" data-a>¡Muchas<br><span>gracias!</span></div><div class="dir" data-a><small>Dirección Monitoreo</small>Cordobeses en Alerta</div><div class="pol" data-a>Policía de la Provincia de Córdoba · Ministerio de Seguridad</div>${bajar(PDF,'Descargar la presentación','PDF · para guardar o compartir')}${bajar(INS,'Instructivo para agendarse','PDF · para el personal móvil')}`}
 ];
-const VER='2026-11-18a';   // misma versión que index.html
+const VER='2026-11-18b';   // misma versión que index.html
 const N=L.length, main=document.getElementById('main'), idx=document.getElementById('idx');
 let cur=0, dir=1, live=null, liveF=0, follow=true;
 idx.innerHTML=L.map((x,i)=>`<button><span>${String(i+1).padStart(2,'0')}</span>${x.t}</button>`).join('');
