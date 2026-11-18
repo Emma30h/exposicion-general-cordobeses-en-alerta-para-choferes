@@ -2,6 +2,8 @@
 
 Esta presentación une las cuatro exposiciones: CeA, 101, Agenda Móvil y División de Frecuencia. Muestra cómo funciona el programa hoy, todo en presente.
 
+- **Publicada:** https://cordobeses-en-alerta-presentacion.vercel.app (la guía del público está en `/guia.html`).
+- **Repositorio:** https://github.com/Emma30h/exposicion-general-cordobeses-en-alerta-para-choferes
 - **Ver en local:** configuración `exposicion-unificada` de `.claude/launch.json`, en http://localhost:8104.
 - **Base del código:** el deck de División de Frecuencia (`6-Exposicion Division Frecuencia`), que es el más nuevo. Las láminas de CeA y del 101 se reescribieron con los mismos estilos.
 - **`src-cea/`:** copia del HTML y de las fotos publicadas de CeA, porque su carpeta original no está en el Escritorio. Es solo para consulta; la presentación no la usa.
@@ -38,9 +40,23 @@ Público: civiles becarios que van a ser choferes de móviles en la calle.
 | 07 · Resultados y equipo | 28-29 |
 | Cierre | 30, con la descarga del instructivo para agendarse |
 
-## Pendiente
+## Guía en vivo
 
-- La guía en vivo con QR para el público.
-- El PDF del material.
-- El afiche.
-- Publicar en GitHub y Vercel.
+- **Activarla:** quien expone toca **Activar guía en vivo** (o la tecla G) y escribe la contraseña **Cordobeses**. Queda guardada en esa computadora.
+- **Envío:** cada cambio de lámina y de paso se manda por Supabase Realtime, en el canal `dmca-presentacion-unica`, firmado con ECDSA P-256. La guía solo acepta mensajes firmados.
+- **Clave:** está cifrada en `config-vivo.js`. La copia sin cifrar vive en `_privado/`, que no se versiona ni se publica.
+- **Versión:** `VER` tiene que ser igual en `index.html` y `guia.html`; hay que subirla si cambian las láminas.
+- **Supabase:** el proyecto (plan gratis, en la misma cuenta de la guía de la Agenda Móvil) se pausa tras unos 7 días sin uso. Hay que reactivarlo con Restore antes de exponer; el tiempo real tarda unos 2 minutos más que la base en volver.
+
+## Material
+
+- **`Cordobeses en Alerta - Presentacion.pdf`:** las 30 láminas, una por página. Sale de `print/presentacion.html` con las capturas de `print/laminas/`, que se sacan con Chrome automático desde el sitio publicado, sin la ventana de la guía ni los controles.
+- **`Instructivo Agendarse - personal tech.pdf`:** el instructivo de la Agenda Móvil.
+- **`print/afiche-qr-bn.pdf`:** el afiche A4 en blanco y negro con el QR de la guía. Sale de `print/afiche-qr.html`.
+
+## Publicar
+
+```bash
+vercel deploy --prod --yes
+git push
+```
