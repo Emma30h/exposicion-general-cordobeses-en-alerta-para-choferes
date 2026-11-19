@@ -2,7 +2,8 @@
 
 Esta presentación une las cuatro exposiciones: CeA, 101, Agenda Móvil y División de Frecuencia. Muestra cómo funciona el programa hoy, todo en presente.
 
-- **Publicada:** https://cordobeses-en-alerta-presentacion.vercel.app (la guía del público está en `/guia.html`).
+- **Publicada:** https://emma30h.github.io/exposicion-general-cordobeses-en-alerta-para-choferes/ (GitHub Pages; la guía del público está en `guia.html`). Se actualiza sola con cada `git push`.
+- **Vercel:** https://cordobeses-en-alerta-presentacion.vercel.app quedó pausado: la cuenta gratis superó el límite de uso el 18/11/2026 y se despausa el 18/12/2026.
 - **Repositorio:** https://github.com/Emma30h/exposicion-general-cordobeses-en-alerta-para-choferes
 - **Ver en local:** configuración `exposicion-unificada` de `.claude/launch.json`, en http://localhost:8104.
 - **Base del código:** el deck de División de Frecuencia (`6-Exposicion Division Frecuencia`), que es el más nuevo. Las láminas de CeA y del 101 se reescribieron con los mismos estilos.
@@ -57,6 +58,7 @@ Público: civiles becarios que van a ser choferes de móviles en la calle.
 ## Publicar
 
 ```bash
-vercel deploy --prod --yes
 git push
 ```
+
+GitHub Pages tarda uno o dos minutos en mostrar los cambios.
